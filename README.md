@@ -5,3 +5,5 @@
 
 ## Approval tests
 * http://approvaltests.com/
+* To approve the current behaviour, from the repo folder run:
+`mv ./src/test/java/com/gildedrose/GildedRoseTest.update_quality.received.txt ./src/test/java/com/gildedrose/GildedRoseTest.update_quality.approved.txt`

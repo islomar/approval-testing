@@ -11,7 +11,7 @@ public class GildedRoseTest {
     CombinationApprovals.verifyAllCombinations(this::doUpdateQuality,
         new String[]{ "foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" },
         new Integer[]{ 0 },
-        new Integer[]{ 0 }
+        new Integer[]{ 0, 1 }
     );
   }
 

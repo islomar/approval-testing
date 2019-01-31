@@ -13,7 +13,7 @@ public class GildedRoseTest {
                       "Backstage passes to a TAFKAL80ETC concert",
                       "Sulfuras, Hand of Ragnaros" },
         new Integer[]{ 0 },
-        new Integer[]{ 0, 1 }
+        new Integer[]{ 0, 1, 50 }
     );
   }
 

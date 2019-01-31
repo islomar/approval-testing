@@ -9,7 +9,9 @@ public class GildedRoseTest {
   public void update_quality() throws Exception {
 
     CombinationApprovals.verifyAllCombinations(this::doUpdateQuality,
-        new String[]{ "foo", "Aged Brie", "Backstage passes to a TAFKAL80ETC concert" },
+        new String[]{ "foo", "Aged Brie",
+                      "Backstage passes to a TAFKAL80ETC concert",
+                      "Sulfuras, Hand of Ragnaros" },
         new Integer[]{ 0 },
         new Integer[]{ 0, 1 }
     );

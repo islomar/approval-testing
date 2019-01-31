@@ -7,14 +7,11 @@ public class GildedRoseTest {
 
   @Test
   public void update_quality() throws Exception {
-    final String name = "foo";
-    final int sellIn = 0;
-    final int quality = 0;
 
     CombinationApprovals.verifyAllCombinations(this::doUpdateQuality,
-        new String[]{ name },
-        new Integer[]{ sellIn },
-        new Integer[]{ quality }
+        new String[]{ "foo" },
+        new Integer[]{ 0 },
+        new Integer[]{ 0 }
     );
   }
 

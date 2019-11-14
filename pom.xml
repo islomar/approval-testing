@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>Let's learn about approval testing :-)</name>
-	<description>Learning about Java 11 and Maven</description>
+	<description>Code for live-coding demo about refactoring legacy code using approval testing</description>
 
 
 	<properties>

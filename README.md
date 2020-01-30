@@ -20,7 +20,7 @@
 
         
 ## How to set it up
-* You need Java 1.8 and Maven installed
+* You need Java 1.8 and Maven 3.1 or higher installed
 
 
 ## How to run the tests
@@ -30,9 +30,18 @@
 
 ## How to generate the tests
 1. Option 1: install the IntelliJ plugin and 
-2. From the terminal: `mvn -DmemoryInMB=2000 -Dcores=2 -evosuite:generate evosuite:export test`
+2. From the terminal, follow these steps: 
+    1. `mvn compile evosuite:generate`
+    1. `mvn -DmemoryInMB=2000 -Dcores=2 -evosuite:generate evosuite:export test`
+2. From the terminal: `mvn -DmemoryInMB=2000 -Dcores=4 -Dsearch_budget=300 -evosuite:generate evosuite:export test`
 
 
 ## TO DO
 * Set up PIT: http://www.evosuite.org/documentation/measuring-code-coverage/
 * Better explore EvoSuite configuration parameters: is it possible to generate stronger tests?
+
+
+## Further readings
+* https://www.diffblue.com/blog/java/testing/java-unit-test-generator-comparison-diffblue-cover-vs-evosuite-vs-randoop-vs-squaretest/
+* [Do Automatically Generated Unit Tests Find Real Faults? An Empirical Study of Effectiveness and Challenges](http://www.evosuite.org/wp-content/papercite-data/pdf/ase15_faults.pdf)
+* Other options: [Randoop](https://randoop.github.io/randoop/), Diffblue Cover.

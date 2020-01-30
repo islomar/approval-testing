@@ -25,3 +25,7 @@ hs_err_pid*
 
 *.iml
 .idea/
+
+# evosuite
+.evosuite
+.scaffolding_list.tmp

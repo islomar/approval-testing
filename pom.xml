@@ -14,13 +14,14 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<evosuiteVersion>1.0.6</evosuiteVersion>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>5.3.2</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -33,6 +34,12 @@
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
 			<version>2.23.4</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.evosuite</groupId>
+			<artifactId>evosuite-standalone-runtime</artifactId>
+			<version>${evosuiteVersion}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -60,7 +67,29 @@
 					</includes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.evosuite.plugins</groupId>
+				<artifactId>evosuite-maven-plugin</artifactId>
+				<version>${evosuiteVersion}</version>
+				<executions><execution>
+					<goals> <goal> prepare </goal> </goals>
+					<phase> process-test-classes </phase>
+				</execution></executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.17</version>
+				<configuration>
+					<properties>
+						<property>
+							<name>listener</name>
+							<value>org.evosuite.runtime.InitializingListener</value>
+						</property>
+					</properties>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-	
+
 </project>
